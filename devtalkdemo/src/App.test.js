@@ -12,7 +12,7 @@ describe("App component", () => {
       }
 
       const propCheck = checkPropTypes(
-        App.prototypes,
+        App.propTypes,
         expectedProps,
         "props",
         App.name
