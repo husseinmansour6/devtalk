@@ -1,8 +1,26 @@
 import React from "react"
 import { shallow } from "enzyme"
 import App from "./App"
+import checkPropTypes from "check-prop-types"
 
 describe("App component", () => {
+  describe("checking proptypes", () => {
+    it("should render without warnings", () => {
+      const expectedProps = {
+        header: "header1",
+        desc: "desc1"
+      }
+
+      const propCheck = checkPropTypes(
+        App.prototypes,
+        expectedProps,
+        "props",
+        App.name
+      )
+
+      expect(propCheck).toBeUndefined()
+    })
+  })
   describe("have props", () => {
     let component
     beforeEach(() => {
