@@ -9,15 +9,15 @@ describe("App component", () => {
     return component
   })
   it("should render without errors", () => {
-    const wrapper = component.find(".mainDiv")
+    const wrapper = component.find("[data-test='mainDiv']")
     expect(wrapper.length).toEqual(1)
   })
   it("should have header", () => {
-    const header = component.find(".header")
+    const header = component.find("[data-test='header']")
     expect(header.length).toEqual(1)
   })
   it("should have description", () => {
-    const desc = component.find(".desc")
+    const desc = component.find("[data-test='desc']")
     expect(desc.length).toEqual(1)
   })
 })
